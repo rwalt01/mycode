@@ -1,0 +1,23 @@
+---
+- name: Playbook - Day One Challenge 
+  hosts: planetexpress:!bender:!farnsworth
+  connection: ssh
+  gather_facts: yes
+
+  tasks:
+  - name: uninstall figlet
+    apt:
+            name: figlet
+            state: absent
+    become: yes
+  - name: uninstall Cowsay
+    apt:
+            name: cowsay
+            state: absent
+    become: yes
+  - name: uninstall bastet
+    apt:
+            name: bastet
+            state: absent
+    become: yes
+

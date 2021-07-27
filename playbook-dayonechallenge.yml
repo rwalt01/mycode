@@ -1,0 +1,24 @@
+---
+- name: Playbook - Day One Challenge 
+  hosts: planetexpress:!bender:!farnsworth
+  connection: ssh
+  gather_facts: yes
+
+  tasks:
+  - name: Install figlet
+    apt:
+            name: figlet
+            state: present
+    become: yes
+  - name: Install Cowsay
+    apt:
+            name: cowsay
+            state: present
+    become: yes
+  - name: Install bastet
+    apt:
+            name: bastet
+            state: present
+    become: yes
+
+
