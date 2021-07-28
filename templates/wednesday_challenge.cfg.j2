@@ -1,0 +1,19 @@
+# Wednesday Challenge - Return the Name and IP of the server
+
+#Server Information:
+
+hosts_ips:
+- host: bender
+  ip: 10.10.2.3
+- host: fry
+  ip: 10.10.2.4
+- host: zoidberg
+  ip: 10.10.2.5
+- host: farnsworth
+  ip: 10.10.2.3
+
+
+
+{% for server in hosts_ips %}
+The {{ server.host }} host has the ip of {{ server.ip }}
+{% endfor %}

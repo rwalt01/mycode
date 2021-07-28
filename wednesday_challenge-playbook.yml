@@ -1,0 +1,22 @@
+---
+
+- name:  Gather Host Name and Ipv4 address
+  hosts:  planetexpress
+  gather_facts: no
+
+  vars:
+    hosts_ips: 
+    - host: bender
+      ip: 10.10.2.3
+    - host: fry
+      ip: 10.10.2.4
+    - host: zoidberg
+      ip: 10.10.2.5
+    - host: farnsworth
+      ip: 10.10.2.6
+
+  tasks:
+   - name:  Server Information
+     template:
+       src: templates/wednesday_challenge.cfg.j2
+       dest: ~/wednesday_challenge.cfg
