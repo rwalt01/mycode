@@ -1,0 +1,5 @@
+---
+# tasks file for bootstrap
+- name: Bootstrap msg 
+  ansible.builtin.debug:
+    msg: Doing Bootstrap things

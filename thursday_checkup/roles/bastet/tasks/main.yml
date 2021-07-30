@@ -1,0 +1,12 @@
+---
+- name: Playbook - Install bastet    
+  connection: ssh     # default is to use the connection plugin ssh.py
+  gather_facts: yes   # default is yes
+
+  tasks:                              
+  - name: using apt to install bastet  
+    apt:                     
+        name: bastet         
+        state: present      
+    become: yes         
+

@@ -1,0 +1,12 @@
+---
+- name: Playbook - Install cowsay    
+  connection: ssh     
+  gather_facts: yes   
+
+  tasks:                              
+  - name: using apt to install cowsay  
+    apt:                     
+        name: cowsay         
+        state: present      
+    become: yes         
+

@@ -1,0 +1,5 @@
+---
+# tasks file for officetools
+- name: Offictools things 
+  ansible.builtin.debug:
+    msg: Doing officetools things

@@ -1,0 +1,12 @@
+---
+#Thursday Checkup
+
+- name: Thursday Checkup 
+  hosts: planetexpress
+  gather_facts: yes
+
+  roles:
+    - sl
+    - cowsay
+    - bastet
+    - #log-entry
