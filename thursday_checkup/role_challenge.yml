@@ -9,4 +9,4 @@
     - sl
     - cowsay
     - bastet
-    - #log-entry
+      #- #log-entry

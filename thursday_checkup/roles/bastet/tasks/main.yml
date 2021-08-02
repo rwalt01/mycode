@@ -1,12 +1,16 @@
 ---
-- name: Playbook - Install bastet    
-  connection: ssh     # default is to use the connection plugin ssh.py
-  gather_facts: yes   # default is yes
-
-  tasks:                              
   - name: using apt to install bastet  
     apt:                     
         name: bastet         
-        state: present      
+        state: latest      
     become: yes         
+
+  - name: Add a log entry
+    lineinfile:
+      path: ~/loggy.log
+      line:  "{{ ansible_date_time.iso8601 }} - Passed Checkup"
+#    line:  "{{ ansible_date_time }} - Passed Checkup"
+#    line:  "{{ ansible_date_time.date }} - Passed Checkup"
+      create: True
+
 
